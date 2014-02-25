@@ -191,6 +191,9 @@ class TransportWrapper:
 
     def __init__(self, transport):
         self.transport = transport
+    
+    def write(self, data):
+        self.transport.write(data)
 
     def close(self, force=False):
         self.transport.close()
